@@ -7,7 +7,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 50dvh;
+    min-height: 60dvh;
 }
 
 h2{
@@ -27,6 +27,15 @@ h3{
 p{
     color: aqua;
     font-weight: bold;
+}
+
+#donation{
+    padding: 0.5rem 1rem;
+    margin-top: 3rem;
+}
+
+#donation a{
+    color: black;
 }
 
 @keyframes changeColor{
