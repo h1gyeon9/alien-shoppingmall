@@ -1,0 +1,77 @@
+*{
+    overflow: hidden;
+}
+
+
+main{
+    font-style: italic;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80dvh;
+}
+
+h2{
+    text-align: right;
+    background-color: rgb(255, 225, 0);
+    color: blue;
+    width: 7rem;
+    margin: 0 0 0 auto;
+    box-shadow: 6px 6px 0 rgb(17, 0, 255);
+}
+
+ul{
+    text-align: right;
+}
+
+li{
+    margin: 1.5rem 1rem;
+    font-size: 2rem;
+}
+
+li:hover{
+    text-decoration: underline;
+    background: rgb(0, 255, 30);
+    color: black;
+}
+
+#discountedPrice{
+    color: red;
+}
+
+#originalPrice{
+    text-decoration: line-through;
+}
+
+@media (max-width: 768px){
+    *{
+        overflow: auto;
+    }
+
+    header{
+        margin: 0 1rem;
+    }
+
+    main{
+        margin: 0 1rem;
+    }
+
+    header a{
+        font-size: 1.2rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    li{
+        font-size: 1rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    footer{
+        display: none;
+    }
+}

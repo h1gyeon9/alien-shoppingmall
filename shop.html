@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/shop.css">
+    <title>우주 쇼핑몰-구매하다</title>
+    <script>
+        function addToCart(item, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ item, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(item + ' 쇼핑용 손수레에 추가,');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="/index.html" id="linktomain"><img src="/src/rotatingufo.gif"></a>
+        <a href="/shoppinglist.html">쇼핑용 손수레</a>
+    </header>
+
+    <main>
+        <h2>물건</h2>
+        <ul>
+            <li onclick="addToCart('흡혈 식기', 14999999)">흡혈 식기 - \14,999,999</li>
+            <li onclick="addToCart('더넓은 무전기', 4999999)">더넓은 무전기 - \4,999,999</li>
+            <li onclick="addToCart('앨리스 피크닉세트', 11999999)">앨리스 피크닉세트 - \11,999,999</li>
+            <li onclick="addToCart('우리가 도움!', 66666666)">우리가 도움! - \66,666,666</li>
+            <li onclick="addToCart('&#8251;할인!&#8251; 은화 뱀', 4999999)">&#8251;할인!&#8251; 은화 뱀 - <span id="discountedPrice">\4,999,999</span><br><span id="originalPrice">\19,999,999</span></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 괴담에 떨어져도 출근을 해야 하는구나 by 백덕수. All rights reserved.<br>This website is a fan creation by <a href="https://github.com/h1gyeon9" target="_blank">Huigyeong Na</a> and is not affiliated with the original work.</p>
+    </footer>
+</body>
+</html>

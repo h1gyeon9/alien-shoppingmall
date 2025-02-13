@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/landing.css">
+    <title>성공 구매!</title>
+</head>
+
+<header>
+    <a href="/index.html" id="linktomain"><img src="/src/rotatingufo.gif"></a>
+</header>
+
+<body>
+    <main>
+        <h2>성공 구매!</h2>
+        <h3>물건이 <span id="underline">로켓</span>을 탔다!</h3>
+        <p id="countdown">도착까지 00:00:08</p>
+        <audio id="ding" src="/src/Ding.mp3"></audio>
+        <script>
+            let countdown = 8;
+            const countdownElement = document.getElementById('countdown');
+            const dingAudio = document.getElementById('ding');
+            const interval = setInterval(() => {
+            countdown--;
+            if (countdown <= 0) {
+            clearInterval(interval);
+            countdownElement.textContent = '도착!';
+            dingAudio.play();
+            } else {
+            countdownElement.textContent = `도착까지 00:00:0${countdown}`;
+            }
+            }, 1000);
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 괴담에 떨어져도 출근을 해야 하는구나 by 백덕수. All rights reserved.<br>This website is a fan creation by <a href="https://github.com/h1gyeon9" target="_blank">Huigyeong Na</a> and is not affiliated with the original work.</p>
+    </footer>
+</body>
+</html>

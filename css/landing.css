@@ -1,0 +1,50 @@
+*{
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50dvh;
+}
+
+h2{
+    animation: changeColor 1s infinite alternate;
+}
+
+h3{
+    color: yellow;
+    background-color: rgb(128, 0, 255);
+}
+
+#underline{
+    text-decoration: underline;
+    color: red;
+}
+
+p{
+    color: aqua;
+    font-weight: bold;
+}
+
+@keyframes changeColor{
+    0% {color: red;}
+    50% {color: white;}
+    100% {color: rgb(0, 8, 255);}
+}
+
+@media (max-width: 768px){
+    main{
+        margin-top: 4rem;
+    }
+
+    footer p{
+        font-size: 0.6rem;
+        display: block;
+        width: 100vw;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+}

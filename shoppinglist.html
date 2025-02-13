@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/shoppinglist.css">
+    <title>우주 쇼핑몰-쇼핑용 손수레</title>
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartList = document.getElementById('cart-list');
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = item.item + ' - ₩' + item.price.toLocaleString();
+                cartList.appendChild(li);
+                totalPrice += item.price;
+            });
+
+            document.getElementById('total-price').textContent = '= ₩' + totalPrice.toLocaleString();
+        }
+
+        window.onload = loadCart;
+    </script>
+</head>
+
+<header>
+    <a href="/index.html" id="linktomain"><img src="/src/rotatingufo.gif"></a>
+    <a href="/shop.html">쇼핑몰로 돌아가다</a>
+</header>
+
+<body>
+    <main>
+        <h2>쇼핑용 손수레</h2>
+        <ul id="cart-list"></ul>
+        <p id="total-price"></p>
+        <h3 onclick="if (document.getElementById('cart-list').children.length === 0) { alert('빈 손수레.'); event.preventDefault(); } else { alert('개발자에게 커피를 사다 >> 국민 029302-04-437678'); }"><a href="landing.html">구매하다</a></h3>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 괴담에 떨어져도 출근을 해야 하는구나 by 백덕수. All rights reserved.<br>This website is a fan creation by <a href="https://github.com/h1gyeon9" target="_blank">Huigyeong Na</a> and is not affiliated with the original work.</p>
+    </footer>
+</body>
+</html>

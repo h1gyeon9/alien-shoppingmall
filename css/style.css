@@ -7,6 +7,42 @@ html{
     background-color: black;
 }
 
+header{
+    margin: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a{
+    font-size: 1.5rem;
+}
+
+h2{
+    margin: 1rem 1rem;
+    font-size: 3rem;
+}
+
+h3{
+    margin: 1rem 1rem;
+    font-size: 2rem
+}
+
+p{
+    margin: 1rem 1rem;
+    font-size: 1.5rem;
+}
+
+#linktomain:hover{
+    box-shadow: none;
+    background: none;
+}
+
+header img{
+    width: 7rem;
+}
+
+
 body::before{    /*crt 모니터 느낌의 scanline 구현*/
     content: "";
     position: fixed;
