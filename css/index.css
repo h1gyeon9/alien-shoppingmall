@@ -12,22 +12,30 @@ main{
 
 #title{
     background-color: teal;
+    font-size: 3rem;
     color: red;
 }
 
 #introduction{
     text-decoration: underline;
+    font-size: 2rem;
     color: yellow;
+}
+
+#linktomall{
+    background-color: rgb(255, 0, 225);
+    font-size: 1.5rem;
+    color: rgb(0, 0, 255);
+}
+
+#colorChange{
+    animation: changeColor 1s infinite alternate;
 }
 
 @keyframes changeColor{
     0% {color: red;}
     50% {color: white;}
     100% {color: rgb(0, 179, 255);}
-}
-
-#colorChange{
-    animation: changeColor 1s infinite alternate;
 }
 
 #ufogif{
